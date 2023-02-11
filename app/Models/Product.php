@@ -9,13 +9,24 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $table = "categories";
+    protected $table = "products";
 
     protected $fillable = [
-        'id', 'name', 'price', 'year', 'model', 'country', 'amount', 'created_at', 'updated_at',
+        'id', 
+        'category_id',
+        'name', 
+        'price', 
+        'prod_country', 
+        'prod_year', 
+        'prod_model',
+        'amount',
+        'thumbnail', 
+        'created_at', 
+        'updated_at',
     ];
 
-    public function Category(){
-        return $this->HasOne(Category::class, 'id', 'category_id');
+    /* получить категорию, к которому принадлежит товар */
+    public function showCategory(){
+        return $this->belongsTo(Category::class);
     }
 }

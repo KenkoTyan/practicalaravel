@@ -125,19 +125,14 @@
 
                             {{--<div class="row mb-3">
                                 <label for="checkbox"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('согласие с правилами регистрации') }}</label>
+                                    class="col-md-4 col-form-label text-md-end">
+                                    {{ __('согласие с правилами регистрации') }}
+                                </label>
 
-                                <div class="col-md-6">
-                                   
+                                <div class="col-md-6">        
                                     <input id="rules" type="checkbox"
                                         class="@error('rules') is-invalid @enderror" name="rules"
                                         required>
-
-                                    @error('rules')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
                             </div>--}}
 

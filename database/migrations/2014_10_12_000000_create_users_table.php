@@ -17,12 +17,16 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
+            //не обяз
             $table->string('patronymic')->nullable();
-            $table->string('login');
+            //уник
+            $table->string('login')->unique();
+            //уник
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            //д.б. не менее 6-ти символов
             $table->string('password');
-            //$table->integer('rules');
+            
             $table->rememberToken();
             $table->timestamps();
         });

@@ -12,10 +12,14 @@ class Category extends Model
     protected $table = "categories";
 
     protected $fillable = [
-        'id', 'name', 'created_at', 'updated_at',
+        'id', 
+        'name', 
+        'created_at', 
+        'updated_at',
     ];
 
-    public function Product(){
-        return $this->belongsTo(Product::class, 'id', 'category_id');
+    /*получить товары к категории */
+    public function showProduct(){
+        return $this->hasMany(Product::class);
     }
 }
