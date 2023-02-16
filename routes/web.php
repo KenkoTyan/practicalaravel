@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 Route::get('/catalog', [App\Http\Controllers\CategoryController::class, 'index'])->name('catalog');
 //Route::get('/catalog/{id}', [App\Http\Controllers\ProductController::class, 'index']);
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'])->name('contacts');

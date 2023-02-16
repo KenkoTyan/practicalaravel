@@ -1,0 +1,51 @@
+.about{
+	font-family: 'Sofia Sans';
+    /*src: url('../fonts/Sofia_Sans/SofiaSans-Medium.ttf') format(opentype);*/
+    font-weight: 500;
+    font-style: normal;
+
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/public/images/about/about-popular.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about-motto{
+	width:100%;
+	height:calc(100vh - var(--height-header) - 1px);
+	
+
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.about-motto--wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	color: #fff;
+}
+.about-motto__logo{
+	display: flex;
+    /* padding: 25px; */
+    padding: 60px 25px;
+    /* gap: 20px; */
+    /* column-gap: 20px; */
+    row-gap: 20px;
+    text-transform: lowercase;
+    border: 1px solid #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-motto__logo img{
+	height: 60px;
+	width: auto;
+	/*padding-bottom: 10px;*/
+	border-bottom: 1px solid #fff;
+}
+.about-motto__slogan{
+	text-transform: uppercase;
+}

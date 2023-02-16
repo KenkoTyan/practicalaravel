@@ -12,10 +12,13 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
 
     <!-- Scripts -->
-    <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
+    <!--<?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>-->
+
+    <link rel="stylesheet" href=<?php echo e(asset('css/app.css')); ?>>
+
 </head>
 
 <body>
@@ -23,11 +26,17 @@
 
         <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-        <main class="py-4">
+        <main class="main">
             <?php echo $__env->yieldContent('content'); ?>
-        </main>
 
+            <?php echo $__env->yieldContent('catalog'); ?>
+
+            <?php echo $__env->yieldContent('about'); ?>
+        </main>
+        <p></p>
     </div>
+
+    <script src=<?php echo e(asset('js/main.js')); ?>></script>
 </body>
 
 </html>

@@ -1,37 +1,41 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<link rel="stylesheet" href={{ asset('css/layouts/catalog.css') }}>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Каталог</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    {{-- <link rel="stylesheet" href={{asset("css/styles.css")}}> --}}
-    <!-- Styles -->
-
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
-</head>
-
-<body class="antialiased">
-
-    @include('layouts.header')
-
-    <main>
-        <h1>Каталог</h1>
+@section('catalog')
+    <section class="catalog">
         <div class="container">
-            <div class="row">
-                <p>Список категорий</p>
-               @foreach($cat as $c)
-               <p>{{$c->name}}</p>
-               @endforeach
-            </div>
-        </div>
-    </main>
-</body>
+            <h1>Каталог</h1>
 
-</html>
+            <div class="catalog-card">
+                <div class="catalog-card__list">
+                    <div class="catalog-card__item">
+                        <p class="catalog-card__item--name">Имя</p>
+                        <p class="catalog-card__item--price">Цена</p>
+                        <p class="catalog-card__item--thumbnail">thumbnail</p>
+                    </div>
+                    <div class="catalog-card__item">
+                        <p class="catalog-card__item--name">Имя</p>
+                        <p class="catalog-card__item--price">Цена</p>
+                        <p class="catalog-card__item--thumbnail">thumbnail</p>
+                    </div>
+                    <div class="catalog-card__item">
+                        <p class="catalog-card__item--name">Имя</p>
+                        <p class="catalog-card__item--price">Цена</p>
+                        <p class="catalog-card__item--thumbnail">thumbnail</p>
+                    </div>
+                    <div class="catalog-card__item">
+                        <p class="catalog-card__item--name">Имя</p>
+                        <p class="catalog-card__item--price">Цена</p>
+                        <p class="catalog-card__item--thumbnail">thumbnail</p>
+                    </div>
+                </div>
+            </div>
+            {{-- <p>Список категорий</p>
+                @foreach ($cat as $c)
+                    <p>{{ $c->name }}</p>
+                @endforeach  
+                --}}
+        </div>
+    </section>
+@endsection

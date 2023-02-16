@@ -12,10 +12,13 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!--@vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
+
+    <link rel="stylesheet" href={{ asset('css/app.css') }}>
+
 </head>
 
 <body>
@@ -23,11 +26,17 @@
 
         @include('layouts.header')
 
-        <main class="py-4">
+        <main class="main">
             @yield('content')
-        </main>
 
+            @yield('catalog')
+
+            @yield('about')
+        </main>
+        <p></p>
     </div>
+
+    <script src={{ asset('js/main.js') }}></script>
 </body>
 
 </html>

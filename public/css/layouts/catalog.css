@@ -1,0 +1,10 @@
+.catalog-card__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.catalog-card__item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

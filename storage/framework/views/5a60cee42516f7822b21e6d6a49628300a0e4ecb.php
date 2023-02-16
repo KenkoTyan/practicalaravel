@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
+<link rel="stylesheet" href=<?php echo e(asset('css/layouts/about.css')); ?>>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>О нас</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
+<?php $__env->startSection('about'); ?>
+    <section class="about">
+        <div class="container">
+            <div class="about-motto">
+                <div class="about-motto--wrapper">
+                    <div class="about-motto__logo">
+                        <img src=<?php echo e(asset('images/logo.svg')); ?> alt="тут лого">
+                        <p>копировальное оборудование</p>
+                    </div>
+                    <div class="about-motto__slogan">
+                        <p>Весь спектр красок и работ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Scripts -->
-    <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
+        <div class="about-slider"></div>
+    </section>
+<?php $__env->stopSection(); ?>
 
-</head>
-
-<body class="antialiased">
-
-    <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
-    <main>
-        <h1>О нас</h1>
-    </main>
-</body>
-
-</html><?php /**PATH /srv/users/cshbinxx/bypvhpe-m1/resources/views/layouts/about.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /srv/users/cshbinxx/bypvhpe-m1/resources/views/layouts/about.blade.php ENDPATH**/ ?>

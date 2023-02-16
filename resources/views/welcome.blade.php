@@ -7,46 +7,40 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    {{-- <link rel="stylesheet" href={{asset("css/styles.css")}}> --}}
-    <!-- Styles -->
-
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" href={{ asset('css/app.css') }}>
+    <!--
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    -->
 
 </head>
 
 <body class="antialiased">
 
-    <header class="header navbar navbar-expand-md navbar-light bg-white shadow-sm">
-
+    {{--<header class="header">
         <div class="container">
-            {{-- <div class="logo">
-                <a href="">True Games</a>
-            </div> --}}
-            <a class="navbar-brand" href="{{ url('/') }}">
-                True Games
+    
+            <a class="logo" href="{{ url('/') }}">
+                <img src={{asset("images/logo.svg")}} alt="">
+                <p>welcome header</p>
             </a>
-            {{-- бургер меню --}}
+          
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            {{-- контент бургера --}}
+         
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <nav class="menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="" class="nav-link">О нас</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">O нас</a></li>
                         <li class="nav-item"><a href="" class="nav-link">Каталог</a></li>
                         <li class="nav-item"><a href="" class="nav-link">Где нас найти?</a></li>
                     </ul>
                 </nav>
 
                 <ul class="navbar-nav ms-auto">
-                    
                     @if (Route::has('login'))
                         <div class="btn-login hidden sm:block">
                             @auth
@@ -61,12 +55,14 @@
                         </div>
                     @endif
                 </ul>
-                {{-- //контент бургера --}}
             </div>
 
-            {{-- //container --}}
+            
         </div>
     </header>
+    --}}
+    @include('layouts.header')
+    ну welcome
 </body>
 
 </html>
