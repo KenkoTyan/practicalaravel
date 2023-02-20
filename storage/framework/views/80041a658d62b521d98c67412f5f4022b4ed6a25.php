@@ -2,6 +2,8 @@
 
 
 
+<?php $__env->startSection('title', 'Каталог'); ?>
+
 <?php $__env->startSection('catalog'); ?>
     <section class="catalog">
         <div class="container">
@@ -9,29 +11,30 @@
 
             <div class="catalog-card">
                 <div class="catalog-card__list">
+                    <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php echo $__env->make("layouts.partials.item", ["product"=>$product], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+                        
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
                     <div class="catalog-card__item">
-                        <p class="catalog-card__item--name">Имя</p>
-                        <p class="catalog-card__item--price">Цена</p>
-                        <p class="catalog-card__item--thumbnail">thumbnail</p>
-                    </div>
-                    <div class="catalog-card__item">
-                        <p class="catalog-card__item--name">Имя</p>
-                        <p class="catalog-card__item--price">Цена</p>
-                        <p class="catalog-card__item--thumbnail">thumbnail</p>
-                    </div>
-                    <div class="catalog-card__item">
-                        <p class="catalog-card__item--name">Имя</p>
-                        <p class="catalog-card__item--price">Цена</p>
-                        <p class="catalog-card__item--thumbnail">thumbnail</p>
-                    </div>
-                    <div class="catalog-card__item">
-                        <p class="catalog-card__item--name">Имя</p>
-                        <p class="catalog-card__item--price">Цена</p>
-                        <p class="catalog-card__item--thumbnail">thumbnail</p>
+                        <img class="card-item catalog-card__item--thumbnail"
+                            src="<?php echo e(asset('/images/catalog/a36b4b559ac69a6fbc40a49fcd5507884305a664.jpg')); ?>">
+                        <p class="catalog-card__item--name card-item card-item">
+                            имя
+                        </p>
+                        <p class="catalog-card__item--price card-item">
+                            великолепно руб.
+                        </p>
                     </div>
                 </div>
             </div>
+
+
+
+
             
+
         </div>
     </section>
 <?php $__env->stopSection(); ?>

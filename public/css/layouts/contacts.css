@@ -1,0 +1,10 @@
+.contacts{
+    background: #2e2d2d;
+    color: white;
+}
+.contacts-social__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}

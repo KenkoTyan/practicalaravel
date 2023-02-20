@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.about');
 });
 
 Auth::routes();
@@ -22,6 +22,17 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
-Route::get('/catalog', [App\Http\Controllers\CategoryController::class, 'index'])->name('catalog');
+/*Route::prefix('catalog')->group(function () {
+    
+});*/
+Route::get('/catalog', [App\Http\Controllers\Catalog\CatalogController::class, 'index'])->name('catalog');
+Route::get('/catalog/{id}', [App\Http\Controllers\Catalog\CatalogController::class, 'catid']);
+//Route::get('/catalog/{id}', [App\Http\Controllers\Catalog\CatalogController::class, 'showProduct']);
+
+//Route::get('/prod', [App\Http\Controllers\Catalog\CatalogController::class, 'cat']);
+
+
+//Route::get('/cart/{id}', [App\Http\Controllers\Catalog\CatalogController::class, 'showProduct']);
+//Route::get('/catalog', [App\Http\Controllers\CategoryController::class, 'index'])->name('catalog');
 //Route::get('/catalog/{id}', [App\Http\Controllers\ProductController::class, 'index']);
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'])->name('contacts');

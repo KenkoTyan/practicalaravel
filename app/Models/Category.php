@@ -17,7 +17,7 @@ class Category extends Model
         'created_at', 
         'updated_at',
     ];
-
+    /* один */
     /*получить товары к категории */
     public function showProduct(){
         return $this->hasMany(Product::class);

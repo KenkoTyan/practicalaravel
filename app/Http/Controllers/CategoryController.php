@@ -17,6 +17,6 @@ class CategoryController extends Controller
         $cat= \App\Models\Category::all();
         return view('layouts.catalog', ["cat"=>$cat]);
     }
-
     
+  
 }

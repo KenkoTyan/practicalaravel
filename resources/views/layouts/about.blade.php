@@ -2,6 +2,8 @@
 
 @extends('layouts.app')
 
+@section('title', 'О нас')
+
 @section('about')
     <section class="about">
         <div class="container">
@@ -18,6 +20,8 @@
             </div>
         </div>
 
-        <div class="about-slider"></div>
+        <div class="about-slider">
+            тут будет слайдер
+        </div>
     </section>
 @endsection

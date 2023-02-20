@@ -71,6 +71,7 @@ button, input[type="submit"] {
     position: relative;
     color: inherit;
     border-bottom: 1px solid var(--hr-color);
+    background: #f7f7ff;
 }
 
 .header a {
@@ -201,7 +202,15 @@ button, input[type="submit"] {
 }
 
 /* Media */
-
+@media (max-width: 1230px){
+    .container {
+        --container-width:900px;
+        max-width: var(--container-width);
+        /*padding: 0 var(--container-padding);
+        margin: 0 auto;*/
+       
+    }
+}
 @media (max-width: 1000px) {
     .nav__list--header {
         display: none;

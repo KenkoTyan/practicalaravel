@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title>Home</title>
+    <title><?php echo $__env->yieldContent('title', 'что это'); ?></title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,16 +24,22 @@
 <body>
     <div id="app">
 
-        <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('layouts.partials.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
         <main class="main">
+            
             <?php echo $__env->yieldContent('content'); ?>
 
             <?php echo $__env->yieldContent('catalog'); ?>
 
             <?php echo $__env->yieldContent('about'); ?>
+
+            <?php echo $__env->yieldContent('contacts'); ?>
+
+            <?php echo $__env->yieldContent('product'); ?>
+            
         </main>
-        <p></p>
+        <p>app</p>
     </div>
 
     <script src=<?php echo e(asset('js/main.js')); ?>></script>

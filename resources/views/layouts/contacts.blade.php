@@ -1,12 +1,29 @@
+<link rel="stylesheet" href={{ asset('css/layouts/contacts.css') }}>
 @extends('layouts.app')
 
-@section('catalog')
-    <div class="container">
-        <h1>Где нас найти?</h1>
+@section('title', 'Контакты')
+
+@section('contacts')
+    <section class="contacts">
         <div class="container">
-            <div class="row">
-                тут будет контактная информация
+            <div class="contacts-social">
+                <div class="contacts-social__list">
+                    <div class="contacts-social__item">
+                        <p>8 (950) 564-38-14</p>
+                    </div>
+                    <div class="contacts-social__item">
+                        <p>copystar@gmail.com</p>
+                    </div>
+                    <div class="contacts-social__item">
+                        пр. Комарова, 13
+                    </div>
+                </div>
+            </div>
+            <div class="contacts-map">
+                
             </div>
         </div>
-    </div>
+
+
+    </section>
 @endsection

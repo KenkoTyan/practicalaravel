@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Home</title>
+    <title>@yield('title', 'что это')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,16 +24,22 @@
 <body>
     <div id="app">
 
-        @include('layouts.header')
+        @include('layouts.partials.header')
 
         <main class="main">
+            
             @yield('content')
 
             @yield('catalog')
 
             @yield('about')
+
+            @yield('contacts')
+
+            @yield('product')
+            
         </main>
-        <p></p>
+        <p>app</p>
     </div>
 
     <script src={{ asset('js/main.js') }}></script>

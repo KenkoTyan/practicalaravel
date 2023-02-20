@@ -2,6 +2,8 @@
 
 
 
+<?php $__env->startSection('title', 'О нас'); ?>
+
 <?php $__env->startSection('about'); ?>
     <section class="about">
         <div class="container">
@@ -18,7 +20,9 @@
             </div>
         </div>
 
-        <div class="about-slider"></div>
+        <div class="about-slider">
+            тут будет слайдер
+        </div>
     </section>
 <?php $__env->stopSection(); ?>
 
