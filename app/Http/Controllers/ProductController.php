@@ -12,11 +12,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    /*public function index($id)
     {
         $product=\App\Models\Product::find($id);
         return view("layouts.catalog", ["product"=>$product]);
-    }
+    }*/
 
     
 }

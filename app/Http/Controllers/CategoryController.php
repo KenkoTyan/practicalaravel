@@ -12,11 +12,11 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    /*public function index()
     {
         $cat= \App\Models\Category::all();
         return view('layouts.catalog', ["cat"=>$cat]);
-    }
+    }*/
     
   
 }

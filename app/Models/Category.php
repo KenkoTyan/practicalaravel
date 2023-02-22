@@ -19,7 +19,7 @@ class Category extends Model
     ];
     /* один */
     /*получить товары к категории */
-    public function showProduct(){
+    public function getProduct(){
         return $this->hasMany(Product::class);
     }
 }

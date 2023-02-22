@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,15 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
+Route::view('/about', 'layouts.about')->name('about');
+
+//Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 /*Route::prefix('catalog')->group(function () {
     
 });*/
 Route::get('/catalog', [App\Http\Controllers\Catalog\CatalogController::class, 'index'])->name('catalog');
-Route::get('/catalog/{id}', [App\Http\Controllers\Catalog\CatalogController::class, 'catid']);
+Route::get('/catalog/{product_id}', [App\Http\Controllers\Catalog\CatalogController::class, 'showProduct']);
+
 //Route::get('/catalog/{id}', [App\Http\Controllers\Catalog\CatalogController::class, 'showProduct']);
 
 //Route::get('/prod', [App\Http\Controllers\Catalog\CatalogController::class, 'cat']);

@@ -15,44 +15,38 @@ class CatalogController extends Controller
      */
     public function index()
     {
-        
-        /*$showCategories = Category::all();
-        return view('layouts.catalog', ["categories"=>$showCategories]);*/
-
-        /* хелпер дает возможность просмотреть массив коллекции? */
-        //dd($showProducts);
-        //продукт
-
         //передается коллекция Продуктов, $showproducts -> атрибут
         $showproducts=\App\Models\Product::all();
         //dd($showproducts);
         return view("layouts.catalog", ["products"=>$showproducts]);
         
     }
-    public function cat()
+    
+    public function showProduct($id)
     {
-        
-        return view("layouts.product");
-        //dd($product);
-    }
-    public function catid($cid)
-    {
-        /*$getOneProduct=Product::find($id);
-        dd($getOneProduct);
-        return view("layouts.product");*/
-        $getOneProduct=Product::find($cid);
+        //передаем id продукта
+        $getOneProduct=Product::find($id);
         //dd($getOneProduct);
         return view("layouts.product",["showProduct"=>$getOneProduct]);
         
     }
-    public function showProduct($id)
+
+    //тип данных и переменная
+    /*public function showSlider()
+    {
+        $nextProducts = Product::all();
+        dd($nextProducts);
+        return view("layout.contacts",["sliderProducts"=>$nextProducts]);
+    }*/
+
+    /*public function showProduct($id)
     {
         $getOneProduct=Category::find($id);
         //$getOneProduct=Product::find($id);
         //dd($getOneProduct);
         return view("layouts.product", ["product"=>$getOneProduct]);
        
-    }
+    }*/
 
     /**
      * Show the form for creating a new resource.

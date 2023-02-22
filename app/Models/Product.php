@@ -26,7 +26,7 @@ class Product extends Model
     ];
     /* многие */
     /* получить доступ к родительской категории */
-    public function showCategory(){
+    public function getCategory(){
         return $this->belongsTo(Category::class);
     }
 }
