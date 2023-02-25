@@ -13,30 +13,49 @@ class CatalogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    /*public function index()
     {
         //передается коллекция Продуктов, $showproducts -> атрибут
-        $showproducts=\App\Models\Product::all();
+        $showproducts=\App\Models\Product::orderBy('id','desc')->get();
         //dd($showproducts);
         return view("layouts.catalog", ["products"=>$showproducts]);
         
+    }*/
+
+    //объект запрса параметром действия исп контроль типов
+    public function filterProduct(Request $request)
+    {
+        if($request->caty_id == 0)
+        {
+            $products = Product::all();
+        } else {
+            $products = Product::where('category_id', $request->cat_id)->get(); //кат тов?
+        }
+        //$products=\App\Models\Product::orderBy('id','desc')->get();
+        dd($poducts);
+        $categories = Category::all();
+        //dd($categories);
+        return view('layouts.catalog', ['products'=>$products, 'categories'=> $categories]);
     }
-    
+
     public function showProduct($id)
     {
         //передаем id продукта
         $getOneProduct=Product::find($id);
         //dd($getOneProduct);
-        return view("layouts.product",["showProduct"=>$getOneProduct]);
-        
+        return view("layouts.product",["showProduct"=>$getOneProduct]); 
     }
 
-    //тип данных и переменная
+    public function sortProduct()
+    {
+
+    }
+
     /*public function showSlider()
     {
         $nextProducts = Product::all();
         dd($nextProducts);
-        return view("layout.contacts",["sliderProducts"=>$nextProducts]);
+        return view("layout.about",["sliderProducts"=>$nextProducts]);
     }*/
 
     /*public function showProduct($id)

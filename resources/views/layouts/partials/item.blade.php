@@ -10,8 +10,9 @@
     </p>
     <a href="catalog/{{ $product->id }}">
         <p class="catalog-card__item--more">
-            подробнее c id {{ $product->id }}
+            подробнее c id продукта{{ $product->id }}
         </p>
+        <p>id категории {{ $product->category_id }}</p>
     </a>
 
 </div>

@@ -14,21 +14,21 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.about');
-});
+Route::get('/', [App\Http\Controllers\AboutController::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::view('/about', 'layouts.about')->name('about');
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
+
 
 //Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 /*Route::prefix('catalog')->group(function () {
     
 });*/
-Route::get('/catalog', [App\Http\Controllers\Catalog\CatalogController::class, 'index'])->name('catalog');
+//Route::get('/catalog', [App\Http\Controllers\Catalog\CatalogController::class, 'index'])->name('catalog');
+Route::get('/catalog', [App\Http\Controllers\Catalog\CatalogController::class, 'filterProduct'])->name('catalog');
 Route::get('/catalog/{product_id}', [App\Http\Controllers\Catalog\CatalogController::class, 'showProduct']);
 
 //Route::get('/catalog/{id}', [App\Http\Controllers\Catalog\CatalogController::class, 'showProduct']);

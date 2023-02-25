@@ -23,26 +23,24 @@
             <div class="itc-slider" data-autoplay="true" data-interval="7000" data-loop="true" data-slider="itc-slider">
                 <div class="itc-slider__wrapper">
                     <div class="itc-slider__list">
-                        {{--@foreach ($sliderProducts as $sliderProduct)
+                        @foreach ($sliderProducts as $sliderProduct)
                             <div class="itc-slider__item">
-                                
+                            <img class="catalog-card__item--thumbnail card-item" src="{{ asset('/storage/products/' . $sliderProduct->thumbnail) }}" alt="прости, картинки нет :(">
                                 <p class="">
-                                    {{ $sliderProduct->name }}
+                                    name {{ $sliderProduct->name }}
                                 </p>
                                 <p class="">
-                                    {{ $sliderProduct->price }} руб.
+                                    price {{ $sliderProduct->price }} руб.
                                 </p>
                             </div>
-                        @endforeach--}}
-                        <div class="itc-slider__item">
-                            
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="" alt="">
-                        </div>
+                        @endforeach
+
+                        {{--<div class="itc-slider__item">1</div>
+                        <div class="itc-slider__item">2</div>
                         <div class="itc-slider__item">3</div>
                         <div class="itc-slider__item">4</div>
-                        <div class="itc-slider__item">5</div>
+                        <div class="itc-slider__item">5</div>--}}
+
                     </div>
                 </div>
                 <button class="itc-slider__btn itc-slider__btn_prev"></button>

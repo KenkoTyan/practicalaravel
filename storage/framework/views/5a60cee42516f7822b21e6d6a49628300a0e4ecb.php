@@ -23,16 +23,21 @@
             <div class="itc-slider" data-autoplay="true" data-interval="7000" data-loop="true" data-slider="itc-slider">
                 <div class="itc-slider__wrapper">
                     <div class="itc-slider__list">
+                        <?php $__currentLoopData = $sliderProducts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sliderProduct): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="itc-slider__item">
+                            <img class="catalog-card__item--thumbnail card-item" src="<?php echo e(asset('/storage/products/' . $sliderProduct->thumbnail)); ?>" alt="прости, картинки нет :(">
+                                <p class="">
+                                    name <?php echo e($sliderProduct->name); ?>
+
+                                </p>
+                                <p class="">
+                                    price <?php echo e($sliderProduct->price); ?> руб.
+                                </p>
+                            </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
                         
-                        <div class="itc-slider__item">
-                            
-                        </div>
-                        <div class="itc-slider__item">
-                            <img src="" alt="">
-                        </div>
-                        <div class="itc-slider__item">3</div>
-                        <div class="itc-slider__item">4</div>
-                        <div class="itc-slider__item">5</div>
+
                     </div>
                 </div>
                 <button class="itc-slider__btn itc-slider__btn_prev"></button>
