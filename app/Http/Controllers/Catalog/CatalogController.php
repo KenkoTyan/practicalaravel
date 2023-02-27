@@ -25,14 +25,14 @@ class CatalogController extends Controller
     //объект запрса параметром действия исп контроль типов
     public function filterProduct(Request $request)
     {
-        if($request->caty_id == 0)
+        if($request->cat_id == 0)
         {
             $products = Product::all();
         } else {
             $products = Product::where('category_id', $request->cat_id)->get(); //кат тов?
         }
         //$products=\App\Models\Product::orderBy('id','desc')->get();
-        dd($poducts);
+        //dd($products);
         $categories = Category::all();
         //dd($categories);
         return view('layouts.catalog', ['products'=>$products, 'categories'=> $categories]);
