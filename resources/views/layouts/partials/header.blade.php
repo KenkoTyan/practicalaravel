@@ -7,7 +7,6 @@
             <div class="nav__logo">
                 <a href="{{ route('about') }}" class="logo">
                     <img src={{ asset('images/logo.svg') }} alt="тут должен быть лого">
-                    <p>header app</p>
                 </a>
             </div>
 

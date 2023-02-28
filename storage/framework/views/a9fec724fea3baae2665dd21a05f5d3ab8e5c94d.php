@@ -10,10 +10,6 @@
 
     <title><?php echo $__env->yieldContent('title', 'что это'); ?></title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-
     <!-- Scripts -->
     <!--<?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>-->
 
@@ -37,9 +33,10 @@
             <?php echo $__env->yieldContent('contacts'); ?>
 
             <?php echo $__env->yieldContent('product'); ?>
+
+            <?php echo $__env->yieldContent('cart'); ?>
             
         </main>
-        <p>app</p>
     </div>
 
     <script src=<?php echo e(asset('js/main.js')); ?>></script>

@@ -10,10 +10,6 @@
 
     <title>@yield('title', 'что это')</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-
-
     <!-- Scripts -->
     <!--@vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
 
@@ -37,9 +33,10 @@
             @yield('contacts')
 
             @yield('product')
+
+            @yield('cart')
             
         </main>
-        <p>app</p>
     </div>
 
     <script src={{ asset('js/main.js') }}></script>
