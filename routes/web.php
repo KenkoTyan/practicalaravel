@@ -27,6 +27,5 @@ Route::get('/catalog/{product_id}', [App\Http\Controllers\Catalog\CatalogControl
 
 Route::get('/basket', [App\Http\Controllers\Basket\CartController::class, 'checkout'])->name('basketGet');
 Route::post('/basket', [App\Http\Controllers\Basket\CartController::class, 'index'])->name('basketPost');
-/*Route::get('/basket/checkout', [App\Http\Controllers\Basket\CartController::class, 'checkout'])->name('basket.checkout');*/
 
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'])->name('contacts');

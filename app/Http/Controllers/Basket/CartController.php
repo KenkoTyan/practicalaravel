@@ -30,11 +30,15 @@ class CartController extends Controller
             $product->amount--;
             $product->save();
         }
+        
         return redirect()->route('basketGet');
     }
 
+
     public function checkout() {
+        /* коллекция корзины */
         $baskets = Basket::where('user_id', auth()->user()->id)->get();
+        //dd($baskets);
         return view('basket.cart', compact('baskets'));
     }
 

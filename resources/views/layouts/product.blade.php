@@ -22,6 +22,8 @@
                 <p class="product-info__name">{{ $showProduct->prod_year }}</p>
                 <p class="product-info__descr">Модель</p>
                 <p class="product-info__name">{{ $showProduct->prod_model }}</p>
+                <p class="product-info__descr">Количество</p>
+                <p class="product-info__name">{{ $showProduct->amount }}</p>
                 <form method="POST" action="{{ route('basketPost') }}">
                     @csrf
                     <input type="hidden" name="id" value="{{ $showProduct->id }}">
