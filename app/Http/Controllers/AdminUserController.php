@@ -1,85 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\AdminUser;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        return view('adminform');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(Request $req)
     {
-        //
+        $product = new Product();
+        //$product -> name = $req  -> id;
+        $product -> category_id = $req  -> category_id;
+        $product -> name = $req  -> name;
+        $product -> price = $req -> price;
+        $product -> prod_country = $req  -> prod_country;
+        $product -> prod_year = $req  -> prod_year;
+        $product -> prod_model = $req -> prod_model;
+        $product -> amount = $req  -> amount;
+        $product -> thumbnail = $req -> thumbnail;
+        $product -> save();
+        return redirect()->route('catalog');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\AdminUser  $adminUser
-     * @return \Illuminate\Http\Response
-     */
-    public function show(AdminUser $adminUser)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\AdminUser  $adminUser
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(AdminUser $adminUser)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AdminUser  $adminUser
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, AdminUser $adminUser)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\AdminUser  $adminUser
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(AdminUser $adminUser)
-    {
-        //
-    }
 }

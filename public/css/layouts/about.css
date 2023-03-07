@@ -1,9 +1,4 @@
 .about {
-	font-family: 'Sofia Sans';
-	/*src: url('../fonts/Sofia_Sans/SofiaSans-Medium.ttf') format(opentype);*/
-	font-weight: 500;
-	font-style: normal;
-
 	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url('/public/images/about/about-popular.jpg');
 	background-position: center;
@@ -11,20 +6,24 @@
 	background-size: cover;
 }
 
-.about-motto {
-	width: 100%;
-	height: calc(100vh - var(--height-header) - 1px);
-
-
+.about-motto, .about-motto--wrapper{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+.about-motto {
+	width: 100%;
+	height: calc(100vh - var(--height-header) - 1px);
+	/*display: flex;
+	justify-content: center;
+	align-items: center;*/
 }
 
 .about-motto--wrapper {
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center;*/
 	gap: 20px;
 
 	color: #fff;
@@ -32,10 +31,7 @@
 
 .about-motto__logo {
 	display: flex;
-	/* padding: 25px; */
 	padding: 60px 25px;
-	/* gap: 20px; */
-	/* column-gap: 20px; */
 	row-gap: 20px;
 	text-transform: lowercase;
 	border: 1px solid #fff;
@@ -69,12 +65,14 @@
 /*Список*/
 .itc-slider__list {
 	counter-reset: slide;
+	max-height: 250px;
 }
 
 .itc-slider__list {
 	display: flex;
 	transition: transform 0.5s ease;
 	will-change: transform;
+	gap: 20px;
 }
 
 /*Элемент*/
@@ -83,6 +81,7 @@
 	max-width: 100%;
 	user-select: none;
 	will-change: transform;
+	gap: 20px;
 }
 
 /*Что-то*/
@@ -96,25 +95,28 @@
 	max-width: 100%;
 	/*counter-increment: slide;*/
 	height: 250px;
-	position: relative;
+	/*position: relative;*/
 }
-.itc-slider__item img{
-	display: block;
-	
+.wrapper_info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
-
-/*.itc-slider__item::before {
-	content: counter(slide) "/5";
-	position: absolute;
-	top: 10px;
-	right: 20px;
-	color: #fff;
-	font-style: italic;
-	font-size: 32px;
-	font-weight: bold;
+.wrapper_info img{
 	display: block;
+	width: 100%;
+    height: 120px;
+	object-fit: cover;
+}
+.wrapper_info p{
+	color: white;
+}
+/*.itc-slider__item img{
+	display: block;
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
 }*/
-
 
 /* на средних экранах (ширина больше 768px) 2 слайда */
 @media (min-width: 768px) {
@@ -131,13 +133,6 @@
 		max-width: 33.3333333333%;
 	}
 }
-
-/*@media (min-width: 1300px) {
-	.itc-slider__item {
-		flex: 0 0 25%;
-		max-width: 25%;
-	}
-}*/
 
 /* кнопки влево и вправо */
 .itc-slider__btn {

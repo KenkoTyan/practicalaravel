@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b
+class ComposerStaticInit7a2a63615b42018d522c523565905d85
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -533,7 +533,6 @@ class ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
-        'App\\Http\\Controllers\\AdminUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminUserController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -556,8 +555,7 @@ class ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\AdminUser' => __DIR__ . '/../..' . '/app/Models/AdminUser.php',
-        'App\\Models\\Basket' => __DIR__ . '/../..' . '/app/Models/Basket.php',
-        'App\\Models\\BasketProduct' => __DIR__ . '/../..' . '/app/Models/BasketProduct.php',
+        'App\\Models\\Cart' => __DIR__ . '/../..' . '/app/Models/Cart.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -5755,6 +5753,9 @@ class ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b
         'Whoops\\Handler\\PlainTextHandler' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Handler/PlainTextHandler.php',
         'Whoops\\Handler\\PrettyPageHandler' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php',
         'Whoops\\Handler\\XmlResponseHandler' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Handler/XmlResponseHandler.php',
+        'Whoops\\Inspector\\InspectorFactory' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Inspector/InspectorFactory.php',
+        'Whoops\\Inspector\\InspectorFactoryInterface' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Inspector/InspectorFactoryInterface.php',
+        'Whoops\\Inspector\\InspectorInterface' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Inspector/InspectorInterface.php',
         'Whoops\\Run' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Run.php',
         'Whoops\\RunInterface' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/RunInterface.php',
         'Whoops\\Util\\HtmlDumperOutput' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/HtmlDumperOutput.php',
@@ -5767,10 +5768,10 @@ class ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit5fe31faf4d9509bd0158849e5bd1d29b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7a2a63615b42018d522c523565905d85::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7a2a63615b42018d522c523565905d85::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7a2a63615b42018d522c523565905d85::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7a2a63615b42018d522c523565905d85::$classMap;
 
         }, null, ClassLoader::class);
     }

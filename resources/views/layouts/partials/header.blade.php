@@ -8,10 +8,13 @@
                 <a href="{{ route('about') }}" class="logo">
                     <img src={{ asset('images/logo.svg') }} alt="тут должен быть лого">
                 </a>
+                <div class="logo__title">
+                    <p>интернет магазин копировального оборудования</p>
+                </div>
             </div>
 
             <ul class="nav__list nav__list--header">
-                <li><a href="{{ route('about') }}" class="active">О нас</a></li>
+                <li><a href="{{ route('about') }}">О нас</a></li>
                 <li><a href="{{ route('catalog') }}">Каталог</a></li>
                 <li><a href="{{ route('contacts') }}">Где нас найти?</a></li>
             </ul>
@@ -53,6 +56,24 @@
                     </li>
                 @endguest
             </ul>
+            @auth
+                <ul class="nav__basket">
+                    <li>
+                        <a href="{{route('basketShow')}}" class="basket">
+                            <img src={{ asset('images/basket.svg') }} alt="img bastet">
+                            <span>Корзина</span>
+                        </a>
+                    </li>
+                </ul>
+           
+                <ul class="nav__admin">
+                    <li>
+                        <a href="{{route('adminpost')}}" >
+                            <span>Админка</span>
+                        </a>
+                    </li>
+                </ul>
+            @endauth
 
             <button type="button" class="nav__toggle">
                 <div class="menu-icon-wrapper">
@@ -62,3 +83,5 @@
         </nav>
     </div>
 </header>
+
+<script src="{{ asset('js/main.js') }}"></script>

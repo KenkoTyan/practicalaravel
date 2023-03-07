@@ -1,3 +1,5 @@
+
+
 <?php $__env->startSection('content'); ?>
     <div class="container">
         <div class="row justify-content-center">
@@ -41,7 +43,7 @@ unset($__errorArgs, $__bag); ?>
                             </div>
 
                             <div class="row mb-3">
-                                <label for="name"
+                                <label for="surname"
                                     class="col-md-4 col-form-label text-md-end"><?php echo e(__('Введите фамилию')); ?></label>
 
                                 <div class="col-md-6">

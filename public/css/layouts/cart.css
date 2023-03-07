@@ -1,9 +1,0 @@
-.cart__list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.cart__item {
-    background: rgb(230, 238, 234);
-}
