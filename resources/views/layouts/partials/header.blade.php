@@ -65,7 +65,8 @@
                         </a>
                     </li>
                 </ul>
-           
+
+                
                 <ul class="nav__admin">
                     <li>
                         <a href="{{route('adminpost')}}" >

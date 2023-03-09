@@ -1,0 +1,50 @@
+div{border: 1px solid #789;}
+.test-1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+/*распределение доступного пр-ва*/
+/*flex-grow 1*/
+.test-1-item{
+    flex-grow: 1;
+}
+/*flex-grow 2 1 1 */
+.test-1-2-item{
+    flex-grow: 2;
+}
+.test-2-item{
+    flex-grow: 1;
+}
+
+.test-2{
+    flex-wrap: wrap;
+}
+/*k уменеьшения эл-та*/
+/*flex-shrink*/
+.test-3-item{
+    flex-grow: 1;
+}
+.test-3-1-item{
+    width: 300px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+/*flex-basis*/
+.test-4-item{
+    flex-grow: 1;
+}
+.test-4-1-item{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+/*flex:auto  по умолч 1 1 auto */
+.test-5-item{
+ flex:  1 1 auto;
+}
+.test-6-item{
+    flex:  1 1 0%;
+}

@@ -18,21 +18,21 @@
             <form action="{{Route('adminpost')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <p>id Category</p>
-                <input type="text" class="form-control form__style" placeholder="id_cat" name="category_id" required>
+                <input type="text" class="form-control form__style" placeholder="id_категории" name="category_id" required>
                 <p>Название</p>
-                <input type="text" class="form-control form__style" placeholder="name" name="name" required>
+                <input type="text" class="form-control form__style" placeholder="имя" name="name" required>
                 <p>Цена</p>
-                <input type="text" class="form-control form__style" placeholder="price" name="price" required>
+                <input type="text" class="form-control form__style" placeholder="цена" name="price" required>
                 <p>Страна</p>
-                <input type="text" class="form-control form__style" placeholder="country" name="prod_country" required>
+                <input type="text" class="form-control form__style" placeholder="страна" name="prod_country" required>
                 <p>Год</p>
-                <input type="text" class="form-control form__style" placeholder="year" name="prod_year" required>
+                <input type="text" class="form-control form__style" placeholder="год" name="prod_year" required>
                 <p>Модель</p>
-                <input type="text" class="form-control form__style" placeholder="model" name="prod_model" required>
+                <input type="text" class="form-control form__style" placeholder="модель" name="prod_model" required>
                 <p>Кол-во</p>
-                <input type="text" class="form-control form__style" placeholder="count" name="amount" required>
+                <input type="text" class="form-control form__style" placeholder="кол-во" name="amount" required>
                 <p>Картинка</p>
-                <input type="text" class="form-control form__style" placeholder="img" name="thumbnail" required>
+                <input type="text" class="form-control form__style" placeholder="название картинки" name="thumbnail" required>
 
                 <input type="submit">
             </form>

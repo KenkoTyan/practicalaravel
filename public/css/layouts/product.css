@@ -27,3 +27,8 @@
     border-radius: 5px; padding: 4px 8px;
 }
 .product-info__additional button:hover{ background: var(--accent-color); }
+
+.product-info__basic img{
+    width: 300px;
+    height: auto;
+}

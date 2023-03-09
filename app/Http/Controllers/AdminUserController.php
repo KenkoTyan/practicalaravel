@@ -24,7 +24,7 @@ class AdminUserController extends Controller
         $product -> amount = $req  -> amount;
         $product -> thumbnail = $req -> thumbnail;
         $product -> save();
-        return redirect()->route('catalog');
+        return redirect()->route('contacts');
     }
 
 }

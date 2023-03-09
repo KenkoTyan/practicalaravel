@@ -32,6 +32,7 @@ Route::get('/catalog/{product_id}', [App\Http\Controllers\Catalog\CatalogControl
 
 Route::get('/basket', [App\Http\Controllers\Basket\CartController::class, 'checkout'])->name('basketShow');
 Route::post('/basket', [App\Http\Controllers\Basket\CartController::class, 'index'])->name('basketPost');
+//удаление из корзины
 Route::get('/basket/{id}', [App\Http\Controllers\Basket\CartController::class, 'destroy'])->name('basketBtn');
 //Route::get('/basket/{id}', [App\Http\Controllers\Basket\CartController::class, 'PlusOrMinus'])->name('basketPlusOrMinus');
 
@@ -39,3 +40,7 @@ Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'
 
 Route::get('/admin', [App\Http\Controllers\AdminUserController::class, 'index'])->name('adminget');
 Route::post('/admin', [App\Http\Controllers\AdminUserController::class, 'create'])->name('adminpost');
+
+Route::get('/test', function() {
+    return view('test');
+});

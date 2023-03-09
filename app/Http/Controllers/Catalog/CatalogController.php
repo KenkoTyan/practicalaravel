@@ -42,6 +42,14 @@ class CatalogController extends Controller
         return view('layouts.catalog', ['products'=>$products, 'categories'=> $categories]);
     }
 
+    public function showProduct($id)
+    {
+        //передаем id продукта
+        $getOneProduct=Product::find($id);
+        //dd($getOneProduct);
+        return view("layouts.product",["showProduct"=>$getOneProduct]); 
+    }
+
     /*public function sortProduct(Request $request)
     {
         if($request->priceproduct == 0){

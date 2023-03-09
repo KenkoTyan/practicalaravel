@@ -89,6 +89,10 @@
 	transition: none;
 }
 
+/*flex: grow shrink base
+grow - k эл-та увелич  и заполнять доступное пр-во
+shrink -
+*/
 /* на маленьких устройствах 1 слайд */
 .itc-slider__item {
 	flex: 0 0 100%;
